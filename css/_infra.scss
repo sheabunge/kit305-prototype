@@ -1,0 +1,148 @@
+
+.far + .fa-plus {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.center-stack {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.centered {
+	text-align: center;
+}
+
+.icon-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	grid-auto-rows: 1fr;
+
+	a {
+		@extend .btn;
+		display: flex;
+		flex-flow: column;
+		text-align: center;
+		background: $olive;
+		color: #efefef;
+
+		&:hover {
+			color: #fff;
+			background: $green;
+		}
+
+		> span:first-child {
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+			flex: 1;
+		}
+
+		> span:last-child {
+			display: block;
+		}
+	}
+}
+
+.icon-list {
+	margin: 1em 0;
+	padding: 0;
+
+	li {
+		display: table-row;
+
+		i {
+			text-align: center;
+			padding: 0 6px;
+		}
+
+		> * {
+			display: table-cell;
+		}
+	}
+}
+
+.stack-list-view {
+
+	h3 {
+		font-size: 1.1rem;
+		font-weight: bold;
+		margin: 5px 0 10px;
+		color: $olive;
+
+		i {
+			float: right;
+			line-height: inherit;
+		}
+	}
+
+	.icon-list {
+		font-size: 0.9rem;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 0.9rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		border-bottom: 1px solid currentColor;
+		border-top: 1px solid currentColor;
+		margin: 10px 0;
+		color: #3b3b3b;
+	}
+
+	nav {
+		display: flex;
+		flex-flow: column;
+
+		a {
+			@extend .btn;
+			text-align: left;
+			padding: 10px;
+			margin: 0.5em 0;
+			position: relative;
+			border-color: $olive;
+		}
+	}
+}
+
+.searchable-select {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.select-control + input[type="search"] {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.select-control option {
+	padding: 5px;
+}
+
+.icon-group {
+	vertical-align: middle;
+	line-height: 1.5;
+}
+
+.action-box {
+	position: relative;
+
+	button, input {
+		position: absolute;
+		left: 10%;
+		top: 30%;
+	}
+
+	input[type=checkbox] {
+		width: 1.3rem;
+		height: 1.3rem;
+	}
+}

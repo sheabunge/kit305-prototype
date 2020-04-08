@@ -1,0 +1,192 @@
+
+.index {
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+		margin-left: 1.5em;
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+#landing {
+
+	h1 {
+		padding: 0 0 1.5em;
+		color: $olive;
+		text-align: center;
+		font-size: 2rem;
+		margin-top: 0;
+
+		i {
+			display: block;
+			font-size: 2.3rem;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+
+#landing-alt, #customers-alt {
+	position: relative;
+	padding: 0;
+
+	.hamburger {
+		position: absolute;
+		left: 1em;
+		top: 1em;
+		line-height: 1.5;
+		color: #fff;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-flow: column;
+		height: 100%;
+	}
+
+	.wrapper a {
+		color: $olive;
+		padding: 1rem .5rem;
+		border-bottom: 1px solid currentColor;
+		display: flex;
+		flex-flow: row;
+		align-items: flex-start;
+		font-size: 1.05rem;
+
+		> i:first-child {
+			position: absolute;
+		}
+
+		span {
+			margin-left: 2em;
+		}
+
+		> i:last-child {
+			margin-left: 2em;
+			flex: 1;
+			text-align: right;
+		}
+
+		i {
+			line-height: 1.5;
+			padding: 0 5px;
+		}
+	}
+
+	h1 {
+		text-align: center;
+		background: $olive;
+		font-size: 1.5rem;
+		color: #fff;
+		margin: 0;
+		padding: 10px;
+	}
+}
+
+.add-button {
+	position: absolute;
+
+	background: $olive;
+	color: #fff;
+	border-radius: 50%;
+	bottom: 10px;
+	right: 10px;
+
+	width: 46px;
+	height: 46px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+#view-raffle {
+	text-align: center;
+}
+
+#view-raffle, #add-raffle, #edit-raffle {
+	> :last-child {
+		margin-bottom: 2em;
+	}
+}
+
+.spacer {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+#sell-tickets {
+	text-align: center;
+
+	input, label {
+		text-align: left;
+	}
+
+	h1 {
+		margin-top: 0;
+	}
+}
+
+.btn-center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.icon-heading {
+	position: relative;
+
+	i {
+		position: absolute;
+		right: 0;
+		line-height: 1.5;
+	}
+}
+
+#customers {
+	nav a {
+		color: $primary;
+	}
+}
+
+h1 i, h1 i span {
+	vertical-align: inherit;
+	line-height: 1.5;
+}
+
+#tickets-created, #view-customer {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+
+	.ticket {
+		border: 1px solid currentColor;
+		width: 150px;
+		height: 75px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 1em auto;
+		border-radius: 7px;
+
+		i {
+			font-size: 150%;
+		}
+	}
+
+	.ticket-inner {
+		border: 1px dashed currentColor;
+		width: 75%;
+		height: 65%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+}

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Raffle Manager</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="dist/app.css">
+</head>
+<body>
+
+<div class="phone">
+	<div class="speaker"></div>
+	<div class="status">
+		<span class="notifications">
+			<span class="clock">11:16</span>
+		</span>
+		<i class="fab fa-bluetooth-b"></i>
+		<i class="fal fa-volume"></i>
+		<i class="fad fa-wifi-2"></i>
+		<i class="fad fa-signal-3"></i>
+		<i class="far fa-battery-full"></i>
+		<span class="battery-level">100%</span>
+	</div>
+
+	<div class="screen">
+
+		<!------------- Landing Page ------------------>
+
+		<section id="landing" data-title="Landing">
+			<div class="center-stack">
+				<h1 class="logo">
+					<i class="far fa-dice"></i>
+					Raffle Manager
+				</h1>
+
+				<nav class="icon-grid">
+					<a href="#raffles">
+						<span><i class="far fa-ticket-alt"></i></span>
+						<span>View Raffles</span>
+					</a>
+					<a href="#add-raffle">
+						<span><i class="far fa-ticket-alt"></i><i class="far fa-plus"></i></span>
+						<span>Create Raffle</span>
+					</a>
+
+					<a href="#customers">
+						<span><i class="far fa-address-book"></i></span>
+						<span>All Customers</span>
+					</a>
+					<a href="#add-customer">
+						<span><i class="far fa-user-plus"></i></span>
+						<span>Add Customer</span>
+					</a>
+				</nav>
+			</div>
+		</section>
+
+		<!------------- All Raffles ------------------>
+
+		<section id="raffles" data-title="All Raffles" class="stack-list-view">
+			<h1>All Raffles <i class="far fa-ticket-alt"></i></h1>
+
+			<nav>
+				<h2>Upcoming Raffles</h2>
+
+				<a href="#view-raffle">
+					<h3>Easter Raffle
+						<i class="far fa-rabbit"></i>
+					</h3>
+
+					<ul class="icon-list">
+						<li><i class="far fa-ticket-alt"></i><span>12 / 50 tickets sold</span></li>
+						<li><i class="far fa-users"></i><span>10 participants</span></li>
+						<li><i class="far fa-stopwatch"></i><span>began on 26 Mar 20</span></li>
+						<li><i class="far fa-box-open"></i><span>drawn on 12 Apr 20</span></li>
+					</ul>
+				</a>
+
+				<a href="#view-raffle">
+					<h3>Canteen Fundraiser
+						<i class="far fa-utensils-alt"></i>
+					</h3>
+
+					<ul class="icon-list">
+						<li><i class="far fa-ticket-alt"></i><span>105 tickets sold</span></li>
+						<li><i class="far fa-users"></i><span>64 participants</span></li>
+						<li><i class="far fa-stopwatch"></i><span>began on 11 Mar 20</span></li>
+						<li><i class="far fa-box-open"></i><span>drawn on 21 Apr 20</span></li>
+					</ul>
+				</a>
+
+				<h2>Drawn Raffles</h2>
+
+				<a href="#view-raffle">
+					<h3>New Year Raffle
+						<i class="far fa-glass-cheers"></i>
+					</h3>
+
+					<ul class="icon-list">
+						<li><i class="far fa-ticket-alt"></i><span>97 tickets sold</span></li>
+						<li><i class="far fa-users"></i><span>31 participants</span></li>
+						<li><i class="far fa-stopwatch"></i><span>began on 01 Jan 20</span></li>
+						<li><i class="far fa-box-open"></i><span>drawn on 15 Jan 20</span></li>
+					</ul>
+				</a>
+
+				<a href="#view-raffle">
+					<h3>Christmas Benefit
+						<i class="far fa-tree-christmas"></i>
+					</h3>
+
+					<ul class="icon-list">
+						<li><i class="far fa-ticket-alt"></i><span>65 tickets sold</span></li>
+						<li><i class="far fa-users"></i><span>19 participants</span></li>
+						<li><i class="far fa-stopwatch"></i><span>began on 03 Dec 19</span></li>
+						<li><i class="far fa-box-open"></i><span>drawn on 24 Dec 19</span></li>
+					</ul>
+				</a>
+			</nav>
+		</section>
+
+		<!------------- Single Raffle ------------------>
+
+		<section id="view-raffle" data-title="Viewing Raffle">
+			<h1>Easter Raffle <i class="far fa-rabbit"></i></h1>
+
+			<p style="margin: 2em;">
+				<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
+					<i class="far fa-ticket-alt"></i>
+					Sell Tickets
+					<i class="far fa-ticket-alt"></i>
+				</a>
+			</p>
+
+			<p><i class="far fa-ticket-alt"></i> 12 tickets sold<br>out of 50 available tickets:</p>
+
+			<select class="form-control select-control searchable-select" size="4" readonly
+			        onchange="window.location.hash='#view-customer'">
+				<option>Charles Bingley (4 tickets)</option>
+				<option>Charlotte Lucas (3 tickets)</option>
+				<option>Elizabeth Bennet (2 tickets)</option>
+				<option>Will Darcy (2 tickets)</option>
+				<option>George Wickham (1 ticket)</option>
+				<option>Caroline Bingley</option>
+				<option>William Collins</option>
+			</select>
+			<input type="search" placeholder="Filter customers…" class="form-control">
+
+			<p>tickets sold for $5.00 each by default</p>
+
+			<a href="#edit-raffle" class="btn btn-primary btn-block"><i class="far fa-edit"></i> Edit Raffle</a>
+
+			<h4>Draw Raffle</h4>
+
+			<p><i class="far fa-clock"></i>
+				This raffle is scheduled for drawing on 12 Apr 20, but can be drawn early.</p>
+
+			<div class="icon-grid" style="margin-bottom: 3em;">
+				<a>
+					<span><i class="far fa-box-open"></i></span>
+					<span>Manual Draw</span>
+				</a>
+				<a>
+					<span><i class="far fa-dice"></i></span>
+					<span>Random Draw</span>
+				</a>
+			</div>
+		</section>
+
+		<!------------- Single Raffle (alternate) ------------------>
+
+		<section id="view-raffle-alt" data-title="Viewing Raffle" class="center-stack">
+			<h1>Easter Raffle <i class="far fa-rabbit"></i></h1>
+
+			<p style="margin: 2em;">
+				<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
+					<i class="far fa-ticket-alt"></i>
+					Sell Tickets
+				</a>
+			</p>
+
+			<p style="margin: 2em;">
+				<a class="btn btn-primary btn-lg btn-block" href="#raffle-sales-alt">
+					<i class="far fa-cash-register"></i> View Sales
+				</a>
+			</p>
+
+			<p style="margin: 2em;">
+				<a class="btn btn-primary btn-lg btn-block" href="#edit-raffle">
+					<i class="far fa-edit"></i>
+					Edit Raffle
+				</a>
+			</p>
+
+			<p style="text-align: center"><i class="far fa-clock"></i>
+				This raffle is scheduled for drawing on 12 Apr 20, but can be drawn early.</p>
+
+			<div class="icon-grid" style="margin-bottom: 3em;">
+				<a>
+					<span><i class="far fa-box-open"></i></span>
+					<span>Manual Draw</span>
+				</a>
+				<a>
+					<span><i class="far fa-dice"></i></span>
+					<span>Random Draw</span>
+				</a>
+			</div>
+		</section>
+
+		<section id="raffle-sales-alt" data-title="View Raffle Sales" class="centered">
+			<h1>Sales for<br><a href="#view-raffle-alt">Easter Raffle <i class="far fa-rabbit"></i></a></h1>
+
+			<p><i class="far fa-ticket-alt"></i> 12 tickets sold<br>out of 50 available tickets:</p>
+
+			<select class="form-control select-control searchable-select" size="7" readonly
+			        onchange="window.location.hash='#view-customer'">
+				<option>Charles Bingley (4 tickets)</option>
+				<option>Charlotte Lucas (3 tickets)</option>
+				<option>Elizabeth Bennet (2 tickets)</option>
+				<option>Will Darcy (2 tickets)</option>
+				<option>George Wickham (1 ticket)</option>
+				<option>Caroline Bingley</option>
+				<option>William Collins</option>
+			</select>
+			<input type="search" placeholder="Filter customers…" class="form-control">
+
+			<p>tickets sold for $5.00 each by default</p>
+		</section>
+
+		<!----------------- Add Tickets -------------------->
+
+		<section id="sell-tickets" data-title="Sell Tickets">
+			<h1>Selling tickets for<br><a href="#view-raffle">Easter Raffle <i class="far fa-rabbit"></i></a></h1>
+
+			<div class="form-group row">
+				<label class="col-6 col-form-label">Number of tickets</label>
+				<div class="col-6">
+					<input id="select_tickets_number" type="number" min="0" class="form-control" max="5" value="3">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-6 col-form-label">Cost per ticket</label>
+				<div class="col-6">
+					<div class="input-group mb-2">
+						<div class="input-group-prepend">
+							<div class="input-group-text">$</div>
+						</div>
+
+						<input id="select_tickets_price" type="number" min="0" class="form-control" value="5.00"
+						       step=".01">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label for="select_ticket_customer" class="col-form-label">Select a customer, or add a new one</label>
+
+				<select class="form-control select-control searchable-select" id="select_ticket_customer" size="3">
+					<option>Charles Bingley (has 4 tickets)</option>
+					<option>Charlotte Lucas (has 3 tickets)</option>
+					<option>Elizabeth Bennet (has 2 tickets)</option>
+					<option>Will Darcy (has 2 tickets)</option>
+					<option>George Wickham (has 1 ticket)</option>
+					<option>Caroline Bingley</option>
+					<option>William Collins</option>
+					<option class="btn btn-primary btn-block" onclick="window.location.hash='#add-customer'">Add new
+						customer →
+					</option>
+				</select>
+				<input type="search" placeholder="Filter customers…" class="form-control">
+			</div>
+
+			<p>Purchasing 3 tickets at $5.00 each =<br>$15.00 total</p>
+			<a class="btn btn-primary" href="#tickets-created">Save Purchase</a>
+		</section>
+
+		<!----------------- Generated Tickets -------------------->
+
+		<section id="tickets-created" data-title="Tickets Created">
+			<h1>Your Tickets <i class="far fa-ticket-alt"></i></h1>
+
+			<p>Success! Here are the three tickets for Charlotte Lucas:</p>
+
+			<div class="ticket">
+				<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10713</span></div>
+			</div>
+			<div class="ticket">
+				<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10714</span></div>
+			</div>
+			<div class="ticket">
+				<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10715</span></div>
+			</div>
+
+			<p><a href="#sell-tickets" class="btn btn-danger btn-center btn-sm">Refund tickets</a></p>
+
+			<a href="#view-raffle" class="btn btn-block btn-primary">Return to the Raffle</a>
+		</section>
+
+		<!---------------- Add Customer ------------------->
+
+		<section id="add-customer" data-title="Add customer">
+			<h1 class="icon-heading">Add Customer <i class="far fa-user-plus"></i></h1>
+
+			<form>
+				<div class="form-group">
+					<label>Customer Name</label>
+					<input type="text" class="form-control is-valid" value="Jane Bennet" required>
+				</div>
+
+				<div class="form-group">
+					<label>Phone Number</label>
+					<input type="tel" class="form-control is-invalid" required>
+				</div>
+
+				<div class="form-group">
+					<label>Email Address</label>
+					<input type="tel" class="form-control is-valid" value="jane@thebennets.co.uk">
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-center">Save Customer</button>
+			</form>
+		</section>
+
+		<!---------------- All Customers ------------------->
+
+		<section id="customers" data-title="All Customers" class="stack-list-view">
+			<h1 class="icon-heading">All Customers <i class="far fa-address-book"></i></h1>
+
+			<input type="search" placeholder="Filter customers…" class="form-control">
+			<nav>
+				<a href="#view-customer"><i class="far fa-user"></i> Caroline Bingley</a>
+				<a href="#view-customer"><i class="far fa-user"></i> Charles Bingley</a>
+				<a href="#view-customer"><i class="far fa-user"></i> Charlotte Lucas</a>
+				<a href="#view-customer"><i class="far fa-user"></i> Elizabeth Bennet</a>
+				<a href="#view-customer"><i class="far fa-user"></i> George Wickham</a>
+				<a href="#view-customer"><i class="far fa-user"></i> Will Darcy</a>
+				<a href="#view-customer"><i class="far fa-user"></i> William Collins</a>
+			</nav>
+		</section>
+
+		<!------------- Create Raffle ------------------>
+
+		<section id="add-raffle" data-title="Create Raffle">
+			<h1 class="icon-heading">Create Raffle
+				<i class="icon-group"><span class="far fa-ticket-alt"></span><span class="far fa-plus"></span></i>
+			</h1>
+
+			<form>
+				<div class="form-group">
+					<label>Name of Raffle</label>
+					<input type="text" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label>Scheduled Draw Date</label>
+					<input type="datetime-local" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label>Raffle Icon</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" value="rocket">
+						<div class="input-group-append">
+							<div class="input-group-text"><i class="fa fa-rocket"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<fieldset class="form-group ">
+					<legend>Ticketing Details</legend>
+					<div class="form-group">
+						<label class="col-form-label">Default ticket price</label>
+
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">$</div>
+							</div>
+
+							<input type="number" min="0" class="form-control" value="5.00" step=".01">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Total number of tickets</label>
+						<input type="number" value="0" class="form-control">
+						<small class="form-text text-muted">Set to 0 if there is no limit on the overall number of
+							tickets
+							sold.</small>
+					</div>
+
+					<div class="form-group">
+						<label>Max number of tickets per person</label>
+						<input type="number" value="0" class="form-control">
+						<small class="form-text text-muted">Set to 0 if there is no limit on the number of tickets one
+							individual customer may purchase.</small>
+					</div>
+				</fieldset>
+
+				<button type="submit" class="btn btn-primary btn-block">Create Raffle</button>
+			</form>
+		</section>
+
+		<section id="edit-raffle" data-title="Create Raffle">
+			<h1>Editing <a href="#view-raffle">Easter Raffle <i class="far fa-rabbit"></i></a></h1>
+
+			<form>
+				<div class="form-group">
+					<label>Name of Raffle</label>
+					<input type="text" class="form-control" required value="Easter Raffle">
+				</div>
+
+				<div class="form-group">
+					<label>Scheduled Draw Date</label>
+					<input type="datetime-local" class="form-control" required value="2020-04-12T10:00">
+				</div>
+
+				<div class="form-group">
+					<label>Raffle Icon</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" value="rabbit">
+						<div class="input-group-append">
+							<div class="input-group-text"><i class="fa fa-rabbit"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<fieldset class="form-group ">
+					<legend>Ticketing Details</legend>
+					<div class="form-group">
+						<label class="col-form-label">Default ticket price</label>
+
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">$</div>
+							</div>
+
+							<input type="number" min="0" class="form-control" value="5.00" step=".01">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Total number of tickets</label>
+						<input type="number" value="50" class="form-control">
+						<small class="form-text text-muted">Set to 0 if there is no limit on the overall number of
+							tickets
+							sold.</small>
+					</div>
+
+					<div class="form-group">
+						<label>Max number of tickets per person</label>
+						<input type="number" value="0" class="form-control">
+						<small class="form-text text-muted">Set to 0 if there is no limit on the number of tickets one
+							individual customer may purchase.</small>
+					</div>
+				</fieldset>
+
+				<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+
+				<p>Deleting a raffle will permanently remove all associated data, including ticket sales.</p>
+				<p><button class="btn btn-danger btn-block"><i class="far fa-trash"></i> Delete Raffle</button></p>
+			</form>
+		</section>
+
+		<section id="add-raffle-alt" data-title="Create Raffle">
+			<h1 class="icon-heading">Create Raffle
+				<i class="icon-group"><span class="far fa-ticket-alt"></span><span class="far fa-plus"></span></i>
+			</h1>
+
+			<form action="#add-raffle-alt-2" method="get">
+				<div class="form-group">
+					<label>Name of Raffle</label>
+					<input type="text" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label>Scheduled Draw Date</label>
+					<input type="datetime-local" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label>Raffle Icon</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" value="rocket">
+						<div class="input-group-append">
+							<div class="input-group-text"><i class="fa fa-rocket"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-block btn-lg" style="margin: 1.5em 0;">Create
+					Raffle
+				</button>
+
+				<button type="submit" class="btn btn-secondary btn-center btn-sm">Advanced Options</button>
+			</form>
+		</section>
+
+		<section id="add-raffle-alt-2">
+			<h1 class="icon-heading">Create Raffle
+				<i class="icon-group"><span class="far fa-ticket-alt"></span><span class="far fa-plus"></span></i>
+			</h1>
+
+			<div class="form-group">
+				<label class="col-form-label">Default ticket price</label>
+
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">$</div>
+					</div>
+
+					<input type="number" min="0" class="form-control" value="5.00" step=".01">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Total number of tickets</label>
+				<input type="number" value="0" class="form-control">
+				<small class="form-text text-muted">Set to 0 if there is no limit on the overall number of tickets
+					sold.</small>
+			</div>
+
+			<div class="form-group">
+				<label>Max number of tickets per person</label>
+				<input type="number" value="0" class="form-control">
+				<small class="form-text text-muted">Set to 0 if there is no limit on the number of tickets one
+					individual customer may purchase.</small>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block" style="margin-bottom: 1em;">Create Raffle
+				</button>
+				<a href="#add-raffle-alt" class="btn btn-secondary btn-sm btn-center">Return to Previous Step</a>
+			</div>
+		</section>
+
+		<!------------- Single Customer ------------------>
+
+		<section id="view-customer" data-title="View Customer">
+			<h1 class="icon-heading">Charlotte Lucas <i class="far fa-user"></i></h1>
+
+			<p>
+				<a href="tel:0467890290"><i class="far fa-phone"></i> 0467 890 290</a><br>
+				<a href="mailto:charlotte@longbourn.co.uk"><i class="far fa-envelope"></i> charlotte@longbourn.co.uk</a>
+			</p>
+
+			<h4>Purchased Tickets</h4>
+
+			<p>Purchased for $5 on 19 Mar 20</p>
+
+			<section class="action-box">
+				<input type="checkbox" class="form-control">
+				<div class="ticket">
+					<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10713</span></div>
+				</div>
+			</section>
+			<section class="action-box">
+				<input type="checkbox" class="form-control">
+				<div class="ticket">
+					<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10714</span></div>
+				</div>
+			</section>
+			<section class="action-box">
+				<input type="checkbox" class="form-control">
+				<div class="ticket">
+					<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10715</span></div>
+				</div>
+			</section>
+
+			<p>Purchased for $3 on 10 Jan 20</p>
+
+			<section class="action-box">
+				<input type="checkbox" class="form-control">
+				<div class="ticket">
+					<div class="ticket-inner"><i class="far fa-glass-cheers"></i> <span>10654</span></div>
+				</div>
+			</section>
+			<section class="action-box">
+				<input type="checkbox" class="form-control">
+				<div class="ticket">
+					<div class="ticket-inner"><i class="far fa-glass-cheers"></i> <span>10653</span></div>
+				</div>
+			</section>
+
+			<button class="btn btn-danger btn-sm" style="margin: 1em 0 2em;"><i class="far fa-trash"></i>&nbsp; Remove selected tickets</button>
+		</section>
+
+		<!------------- Landing Page (Alternate) ------------------>
+
+		<section id="landing-alt" data-title="Landing (alt)">
+			<div class="wrapper">
+				<h1 class="banner">
+					Raffle Manager
+					<i class="far fa-dice"></i>
+				</h1>
+
+				<a href="#view-raffle">
+					<i class="far fa-rabbit"></i>
+					<span>Easter Raffle</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-raffle">
+					<i class="far fa-utensils-alt"></i>
+					<span>Canteen Fundraiser</span>
+					<i class="far fa-edit"></i>
+				</a>
+
+				<a href="#view-raffle">
+					<i class="far fa-glass-cheers"></i>
+					<span>New Year Raffle</span>
+					<i class="far fa-edit"></i>
+				</a>
+
+				<a href="#view-raffle">
+					<i class="far fa-tree-christmas"></i>
+					<span>Christmas Benefit</span>
+					<i class="far fa-edit"></i>
+				</a>
+			</div>
+			<a class="hamburger" href="#customers-alt"><i class="far fa-bars"></i></a>
+			<a class="add-button" href="#add-raffle"><i class="far fa-plus"></i></a>
+		</section>
+
+		<!------------- Customers List (Alternate) ------------------>
+
+		<section id="customers-alt" data-title="All Customers (alt)" class="stack-list-view">
+			<div class="wrapper">
+				<h1 class="banner">
+					Raffle Customers <i class="far fa-dice"></i>
+				</h1>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>Caroline Bingley</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>Charles Bingley</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>Charlotte Lucas</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>Elizabeth Bennet</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>George Wickham</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>Will Darcy</span>
+					<i class="far fa-edit"></i>
+				</a>
+				<a href="#view-customer">
+					<i class="far fa-user"></i>
+					<span>William Collins</span>
+					<i class="far fa-edit"></i>
+				</a>
+			</div>
+			<a class="add-button" href="#add-customer"><i class="far fa-plus"></i></a>
+			<a class="hamburger" href="#landing-alt"><i class="far fa-bars"></i></a>
+		</section>
+
+		<!------------- Unimplemented screen ------------------>
+
+		<section id="unimplemented" data-title="Unimplemented">
+			<div class="center-stack">
+				<p>This screen has not been implemented.</p>
+				<p>Please use the back button to try again.</p>
+			</div>
+		</section>
+	</div>
+
+	<div class="buttons">
+		<a class="apps-button" href="#"></a>
+		<a class="home-button" href="#"></a>
+		<a class="back-button" href="javascript:window.history.back()"></a>
+	</div>
+</div>
+
+<div class="index">
+	<h3>Prototype 1</h3>
+
+	<ul>
+		<li><a href="#landing">Landing screen</a></li>
+	</ul>
+	<ul>
+		<li><a href="#raffles">List of raffles</a></li>
+		<li><a href="#view-raffle">Viewing raffle details</a></li>
+		<li><a href="#add-raffle">Creating a raffle</a></li>
+		<li><a href="#edit-raffle">Editing a raffle</a></li>
+	</ul>
+	<ul>
+		<li><a href="#sell-tickets">Selling tickets</a></li>
+		<li><a href="#tickets-created">Tickets created</a></li>
+	</ul>
+	<ul>
+		<li><a href="#add-customer">Adding a new customer</a></li>
+		<li><a href="#customers">List of customers</a></li>
+		<li><a href="#view-customer">Viewing customer details</a></li>
+	</ul>
+
+	<h3>Prototype 2</h3>
+	<ul>
+		<li><a href="#landing-alt">Landing screen (version 2)</a></li>
+		<li><a href="#customers-alt">List of customers (version 2)</a></li>
+	</ul>
+
+	<h3>Prototype 3</h3>
+	<ul>
+		<li><a href="#add-raffle-alt">Creating a raffle (version 2)</a></li>
+		<li><a href="#add-raffle-alt-2">Creating a raffle, step two</a></li>
+	</ul>
+	<ul>
+		<li><a href="#view-raffle-alt">Viewing a raffle (version 2)</a></li>
+		<li><a href="#raffle-sales-alt">Viewing a raffle's sales</a></li>
+	</ul>
+</div>
+
+<script src="dist/app.js"></script>
+
+</body>
+</html>

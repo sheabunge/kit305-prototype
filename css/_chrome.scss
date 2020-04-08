@@ -1,0 +1,152 @@
+$phone-width: 350px;
+$phone-height: 640px;
+$button-colour: #ccc;
+
+body {
+	font-family: Lato, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+	margin: 2em 0 0;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.phone {
+	width: $phone-width;
+	height: $phone-height;
+	border: 2px solid #ccc;
+	border-radius: 30px;
+	background: #333;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	padding-bottom: 10px;
+	resize: both;
+	overflow: auto;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.status {
+	width: 90%;
+	color: #fff;
+	font-size: 12px;
+	display: flex;
+	flex-flow: row;
+	padding: 3px;
+	line-height: 1;
+	background: #3b3b3b;
+	align-items: center;
+
+	> * {
+		display: inline-block;
+	}
+
+	> :first-child {
+		flex: 1;
+		margin: 0;
+	}
+
+	.fad {
+		font-size: 9px;
+	}
+
+	i, span {
+		margin-left: 5px;
+	}
+}
+
+.screen {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: #f5f5f5;
+	width: 90%;
+	height: 100%;
+	margin: 0;
+	overflow-y: auto;
+}
+
+.screen > section {
+	height: 100%;
+	display: none;
+	padding: 10px;
+}
+
+.speaker {
+	width: 50px;
+	height: 8px;
+	/*border: 1px solid #ccc;*/
+	border-radius: 6px;
+	background: #444;
+	margin: 1em auto;
+
+	&::after {
+		content: '';
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: #444;
+		float: right;
+		margin-right: -70%;
+	}
+}
+
+
+$button-size: 10px;
+
+.buttons {
+	background-color: #333;
+	display: flex;
+	flex-flow: row;
+	width: 90%;
+	padding-top: 1px;
+
+	> * {
+		flex: 1;
+		appearance: none;
+		background: transparent;
+		border: none;
+		color: #ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&::before {
+			content: ' ';
+			display: block;
+			vertical-align: middle;
+			border: 1.5px solid $button-colour;
+			line-height: 1;
+			margin: 15px 0;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 42%;
+		}
+	}
+
+	.apps-button::before {
+		width: $button-size;
+		height: $button-size;
+	}
+
+	.home-button::before {
+		border-radius: 50%;
+		width: $button-size + 1;
+		height: $button-size + 1;
+	}
+
+	.back-button::before {
+		content: '◁';
+		border: 0;
+		font-size: 15px;
+	}
+}
