@@ -11,6 +11,7 @@ body {
 	flex-flow: row;
 	justify-content: center;
 	align-items: center;
+	font-size: 1rem;
 }
 
 .phone {
@@ -61,7 +62,6 @@ body {
 }
 
 .screen {
-	border: 1px solid #ccc;
 	box-sizing: border-box;
 	overflow: hidden;
 	background: #f5f5f5;

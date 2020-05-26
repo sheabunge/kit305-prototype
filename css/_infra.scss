@@ -12,8 +12,18 @@
 	height: 100%;
 }
 
+.center-stack-arranged {
+	@extend .center-stack;
+	justify-content: space-evenly;
+}
+
 .centered {
 	text-align: center;
+}
+
+#landing .action-button {
+	width: 90%;
+	max-width: 200px;
 }
 
 .icon-grid {
@@ -21,32 +31,38 @@
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
 	grid-auto-rows: 1fr;
+}
 
-	a {
-		@extend .btn;
+.action-button {
+	@extend .btn;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	background: $olive;
+	color: #efefef;
+
+	&:hover {
+		color: #fff;
+		background: $green;
+	}
+
+	> span:first-child {
+		font-size: 2rem;
 		display: flex;
-		flex-flow: column;
-		text-align: center;
-		background: $olive;
-		color: #efefef;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		flex: 1;
+	}
 
-		&:hover {
-			color: #fff;
-			background: $green;
-		}
+	> span:last-child {
+		display: block;
+	}
+}
 
-		> span:first-child {
-			font-size: 2rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 10px;
-			flex: 1;
-		}
-
-		> span:last-child {
-			display: block;
-		}
+.icon-grid, .actions-stacked {
+	a {
+		@extend .action-button;
 	}
 }
 
@@ -71,7 +87,7 @@
 .stack-list-view {
 
 	h3 {
-		font-size: 1.1rem;
+		font-size: 1rem;
 		font-weight: bold;
 		margin: 5px 0 10px;
 		color: $olive;
@@ -106,9 +122,9 @@
 			@extend .btn;
 			text-align: left;
 			padding: 10px;
-			margin: 0.5em 0;
 			position: relative;
-			border-color: $olive;
+			border-bottom-color: $olive;
+			border-radius: 0;
 		}
 	}
 }

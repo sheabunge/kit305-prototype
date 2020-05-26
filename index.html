@@ -29,42 +29,30 @@
 		<!------------- Landing Page ------------------>
 
 		<section id="landing" data-title="Landing">
-			<div class="center-stack">
+			<div class="center-stack-arranged">
 				<h1 class="logo">
 					<i class="far fa-dice"></i>
 					Raffle Manager
 				</h1>
 
-				<nav class="icon-grid">
-					<a href="#raffles">
-						<span><i class="far fa-ticket-alt"></i></span>
-						<span>View Raffles</span>
-					</a>
-					<a href="#add-raffle">
-						<span><i class="far fa-ticket-alt"></i><i class="far fa-plus"></i></span>
-						<span>Create Raffle</span>
-					</a>
+				<a href="#raffles" class="action-button">
+					<span><i class="far fa-ticket-alt"></i></span>
+					<span>Raffles</span>
+				</a>
 
-					<a href="#customers">
-						<span><i class="far fa-address-book"></i></span>
-						<span>All Customers</span>
-					</a>
-					<a href="#add-customer">
-						<span><i class="far fa-user-plus"></i></span>
-						<span>Add Customer</span>
-					</a>
-				</nav>
+				<a href="#customers" class="action-button">
+					<span><i class="far fa-users"></i></span>
+					<span>Customers</span>
+				</a>
 			</div>
 		</section>
 
 		<!------------- All Raffles ------------------>
 
 		<section id="raffles" data-title="All Raffles" class="stack-list-view">
-			<h1>All Raffles <i class="far fa-ticket-alt"></i></h1>
+			<h1 class="banner">Raffles</h1>
 
 			<nav>
-				<h2>Upcoming Raffles</h2>
-
 				<a href="#view-raffle">
 					<h3>Easter Raffle
 						<i class="far fa-rabbit"></i>
@@ -73,8 +61,6 @@
 					<ul class="icon-list">
 						<li><i class="far fa-ticket-alt"></i><span>12 / 50 tickets sold</span></li>
 						<li><i class="far fa-users"></i><span>10 participants</span></li>
-						<li><i class="far fa-stopwatch"></i><span>began on 26 Mar 20</span></li>
-						<li><i class="far fa-box-open"></i><span>drawn on 12 Apr 20</span></li>
 					</ul>
 				</a>
 
@@ -86,12 +72,8 @@
 					<ul class="icon-list">
 						<li><i class="far fa-ticket-alt"></i><span>105 tickets sold</span></li>
 						<li><i class="far fa-users"></i><span>64 participants</span></li>
-						<li><i class="far fa-stopwatch"></i><span>began on 11 Mar 20</span></li>
-						<li><i class="far fa-box-open"></i><span>drawn on 21 Apr 20</span></li>
 					</ul>
 				</a>
-
-				<h2>Drawn Raffles</h2>
 
 				<a href="#view-raffle">
 					<h3>New Year Raffle
@@ -101,8 +83,6 @@
 					<ul class="icon-list">
 						<li><i class="far fa-ticket-alt"></i><span>97 tickets sold</span></li>
 						<li><i class="far fa-users"></i><span>31 participants</span></li>
-						<li><i class="far fa-stopwatch"></i><span>began on 01 Jan 20</span></li>
-						<li><i class="far fa-box-open"></i><span>drawn on 15 Jan 20</span></li>
 					</ul>
 				</a>
 
@@ -114,17 +94,17 @@
 					<ul class="icon-list">
 						<li><i class="far fa-ticket-alt"></i><span>65 tickets sold</span></li>
 						<li><i class="far fa-users"></i><span>19 participants</span></li>
-						<li><i class="far fa-stopwatch"></i><span>began on 03 Dec 19</span></li>
-						<li><i class="far fa-box-open"></i><span>drawn on 24 Dec 19</span></li>
 					</ul>
 				</a>
 			</nav>
+
+			<a class="add-button" href="#add-raffle"><i class="far fa-plus"></i></a>
 		</section>
 
 		<!------------- Single Raffle ------------------>
 
 		<section id="view-raffle" data-title="Viewing Raffle">
-			<h1>Easter Raffle <i class="far fa-rabbit"></i></h1>
+			<h1 class="banner">Easter Raffle</h1>
 
 			<p style="margin: 2em;">
 				<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
@@ -172,7 +152,7 @@
 		<!------------- Single Raffle (alternate) ------------------>
 
 		<section id="view-raffle-alt" data-title="Viewing Raffle" class="center-stack">
-			<h1>Easter Raffle <i class="far fa-rabbit"></i></h1>
+			<h1 class="banner">Easter Raffle</h1>
 
 			<p style="margin: 2em;">
 				<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
@@ -210,7 +190,7 @@
 		</section>
 
 		<section id="raffle-sales-alt" data-title="View Raffle Sales" class="centered">
-			<h1>Sales for<br><a href="#view-raffle-alt">Easter Raffle <i class="far fa-rabbit"></i></a></h1>
+			<h1>Easter Raffle <span class="subtitle">Ticket Sales</span></h1>
 
 			<p><i class="far fa-ticket-alt"></i> 12 tickets sold<br>out of 50 available tickets:</p>
 
@@ -232,7 +212,7 @@
 		<!----------------- Add Tickets -------------------->
 
 		<section id="sell-tickets" data-title="Sell Tickets">
-			<h1>Selling tickets for<br><a href="#view-raffle">Easter Raffle <i class="far fa-rabbit"></i></a></h1>
+			<h1 class="banner">Easter Raffle <span class="subtitle">Sell Tickets</span></h1>
 
 			<div class="form-group row">
 				<label class="col-6 col-form-label">Number of tickets</label>
@@ -588,42 +568,6 @@
 			<button class="btn btn-danger btn-sm" style="margin: 1em 0 2em;"><i class="far fa-trash"></i>&nbsp; Remove selected tickets</button>
 		</section>
 
-		<!------------- Landing Page (Alternate) ------------------>
-
-		<section id="landing-alt" data-title="Landing (alt)">
-			<div class="wrapper">
-				<h1 class="banner">
-					Raffle Manager
-					<i class="far fa-dice"></i>
-				</h1>
-
-				<a href="#view-raffle">
-					<i class="far fa-rabbit"></i>
-					<span>Easter Raffle</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-raffle">
-					<i class="far fa-utensils-alt"></i>
-					<span>Canteen Fundraiser</span>
-					<i class="far fa-edit"></i>
-				</a>
-
-				<a href="#view-raffle">
-					<i class="far fa-glass-cheers"></i>
-					<span>New Year Raffle</span>
-					<i class="far fa-edit"></i>
-				</a>
-
-				<a href="#view-raffle">
-					<i class="far fa-tree-christmas"></i>
-					<span>Christmas Benefit</span>
-					<i class="far fa-edit"></i>
-				</a>
-			</div>
-			<a class="hamburger" href="#customers-alt"><i class="far fa-bars"></i></a>
-			<a class="add-button" href="#add-raffle"><i class="far fa-plus"></i></a>
-		</section>
-
 		<!------------- Customers List (Alternate) ------------------>
 
 		<section id="customers-alt" data-title="All Customers (alt)" class="stack-list-view">
@@ -668,7 +612,6 @@
 				</a>
 			</div>
 			<a class="add-button" href="#add-customer"><i class="far fa-plus"></i></a>
-			<a class="hamburger" href="#landing-alt"><i class="far fa-bars"></i></a>
 		</section>
 
 		<!------------- Unimplemented screen ------------------>

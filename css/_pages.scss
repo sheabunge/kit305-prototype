@@ -7,18 +7,14 @@
 	}
 }
 
-h1 {
-	text-align: center;
-}
-
 #landing {
 
 	h1 {
-		padding: 0 0 1.5em;
-		color: $olive;
+		//color: $olive;
 		text-align: center;
 		font-size: 2rem;
-		margin-top: 0;
+		margin: 0;
+		padding: 0;
 
 		i {
 			display: block;
@@ -28,61 +24,67 @@ h1 {
 	}
 }
 
-
-#landing-alt, #customers-alt {
+.screen > section {
 	position: relative;
 	padding: 0;
+}
 
-	.hamburger {
+.hamburger {
+	position: absolute;
+	left: 1em;
+	top: 1em;
+	line-height: 1.5;
+	color: #fff;
+}
+
+
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+.wrapper a {
+	color: $olive;
+	padding: 1rem .5rem;
+	border-bottom: 1px solid currentColor;
+	display: flex;
+	flex-flow: row;
+	align-items: flex-start;
+	font-size: 1.05rem;
+
+	> i:first-child {
 		position: absolute;
-		left: 1em;
-		top: 1em;
+	}
+
+	span {
+		margin-left: 2em;
+	}
+
+	> i:last-child {
+		margin-left: 2em;
+		flex: 1;
+		text-align: right;
+	}
+
+	i {
 		line-height: 1.5;
-		color: #fff;
+		padding: 0 5px;
 	}
+}
 
-	.wrapper {
-		display: flex;
-		flex-flow: column;
-		height: 100%;
-	}
+.banner {
+	text-align: left;
+	background: $olive;
+	font-size: 1.2rem;
+	font-weight: normal;
+	color: #fff;
+	margin: 0;
+	padding: 10px;
 
-	.wrapper a {
-		color: $olive;
-		padding: 1rem .5rem;
-		border-bottom: 1px solid currentColor;
-		display: flex;
-		flex-flow: row;
-		align-items: flex-start;
-		font-size: 1.05rem;
-
-		> i:first-child {
-			position: absolute;
-		}
-
-		span {
-			margin-left: 2em;
-		}
-
-		> i:last-child {
-			margin-left: 2em;
-			flex: 1;
-			text-align: right;
-		}
-
-		i {
-			line-height: 1.5;
-			padding: 0 5px;
-		}
-	}
-
-	h1 {
-		text-align: center;
-		background: $olive;
-		font-size: 1.5rem;
-		color: #fff;
-		margin: 0;
-		padding: 10px;
+	span {
+		display: block;
+		font-size: small;
 	}
 }
 
