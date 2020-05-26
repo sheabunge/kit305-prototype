@@ -41,7 +41,7 @@
 				</a>
 
 				<a href="#customers" class="action-button">
-					<span><i class="far fa-users"></i></span>
+					<span><i class="fas fa-users"></i></span>
 					<span>Customers</span>
 				</a>
 			</div>
@@ -103,165 +103,148 @@
 
 		<!------------- Single Raffle ------------------>
 
-		<section id="view-raffle" data-title="Viewing Raffle">
-			<h1 class="banner">Easter Raffle</h1>
+		<section id="view-raffle" data-title="Viewing Raffle" class="center-stack-arranged">
+			<h1 class="banner">
+				<a class="nav-icon" href="#raffles"><i class="far fa-arrow-left"></i></a>
+				Easter Raffle
+				<nav class="action-icon">
+					<a href="#edit-raffle">
+						<i class="fas fa-pen"></i></a>
+					<i class="fas fa-trash"></i>
+				</nav>
+			</h1>
 
-			<p style="margin: 2em;">
-				<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
-					<i class="far fa-ticket-alt"></i>
-					Sell Tickets
-					<i class="far fa-ticket-alt"></i>
-				</a>
-			</p>
+			<p><i class="far fa-ticket-alt"></i> 12 tickets sold<br>out of 50 available tickets</p>
 
-			<p><i class="far fa-ticket-alt"></i> 12 tickets sold<br>out of 50 available tickets:</p>
-
-			<select class="form-control select-control searchable-select" size="4" readonly
-			        onchange="window.location.hash='#view-customer'">
-				<option>Charles Bingley (4 tickets)</option>
-				<option>Charlotte Lucas (3 tickets)</option>
-				<option>Elizabeth Bennet (2 tickets)</option>
-				<option>Will Darcy (2 tickets)</option>
-				<option>George Wickham (1 ticket)</option>
-				<option>Caroline Bingley</option>
-				<option>William Collins</option>
-			</select>
-			<input type="search" placeholder="Filter customers…" class="form-control">
-
-			<p>tickets sold for $5.00 each by default</p>
-
-			<a href="#edit-raffle" class="btn btn-primary btn-block"><i class="far fa-edit"></i> Edit Raffle</a>
-
-			<h4>Draw Raffle</h4>
-
-			<p><i class="far fa-clock"></i>
-				This raffle is scheduled for drawing on 12 Apr 20, but can be drawn early.</p>
-
-			<div class="icon-grid" style="margin-bottom: 3em;">
-				<a>
-					<span><i class="far fa-box-open"></i></span>
-					<span>Manual Draw</span>
-				</a>
-				<a>
-					<span><i class="far fa-dice"></i></span>
-					<span>Random Draw</span>
-				</a>
-			</div>
+			<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
+				<i class="far fa-ticket-alt"></i>
+				Sell Tickets
+			</a>
+			<a class="btn btn-primary btn-lg btn-block" href="#raffle-sales-alt">
+				<i class="far fa-cash-register"></i> View Sales
+			</a>
+			<a class="btn btn-primary btn-lg btn-block" href="#edit-raffle">
+				<i class="far fa-box-open"></i>
+				Draw Winners
+			</a>
 		</section>
 
-		<!------------- Single Raffle (alternate) ------------------>
+		<!--		<select class="form-control select-control searchable-select" size="4" readonly-->
+		<!--		        onchange="window.location.hash='#view-customer'">-->
+		<!--			<option>Charles Bingley (4 tickets)</option>-->
+		<!--			<option>Charlotte Lucas (3 tickets)</option>-->
+		<!--			<option>Elizabeth Bennet (2 tickets)</option>-->
+		<!--			<option>Will Darcy (2 tickets)</option>-->
+		<!--			<option>George Wickham (1 ticket)</option>-->
+		<!--			<option>Caroline Bingley</option>-->
+		<!--			<option>William Collins</option>-->
+		<!--		</select>-->
+		<!--		<input type="search" placeholder="Filter customers…" class="form-control">-->
 
-		<section id="view-raffle-alt" data-title="Viewing Raffle" class="center-stack">
-			<h1 class="banner">Easter Raffle</h1>
+		<!--		<p>tickets sold for $5.00 each by default</p>-->
 
-			<p style="margin: 2em;">
-				<a class="btn btn-primary btn-lg btn-block" href="#sell-tickets">
-					<i class="far fa-ticket-alt"></i>
-					Sell Tickets
-				</a>
-			</p>
+		<!--		<a href="#edit-raffle" class="btn btn-primary btn-block"><i class="far fa-edit"></i> Edit Raffle</a>-->
 
-			<p style="margin: 2em;">
-				<a class="btn btn-primary btn-lg btn-block" href="#raffle-sales-alt">
-					<i class="far fa-cash-register"></i> View Sales
-				</a>
-			</p>
+		<!--		<h4>Draw Raffle</h4>-->
 
-			<p style="margin: 2em;">
-				<a class="btn btn-primary btn-lg btn-block" href="#edit-raffle">
-					<i class="far fa-edit"></i>
-					Edit Raffle
-				</a>
-			</p>
+		<!--		<p><i class="far fa-clock"></i>-->
+		<!--			This raffle is scheduled for drawing on 12 Apr 20, but can be drawn early.</p>-->
 
-			<p style="text-align: center"><i class="far fa-clock"></i>
-				This raffle is scheduled for drawing on 12 Apr 20, but can be drawn early.</p>
-
-			<div class="icon-grid" style="margin-bottom: 3em;">
-				<a>
-					<span><i class="far fa-box-open"></i></span>
-					<span>Manual Draw</span>
-				</a>
-				<a>
-					<span><i class="far fa-dice"></i></span>
-					<span>Random Draw</span>
-				</a>
-			</div>
+		<!--		<div class="icon-grid" style="margin-bottom: 3em;">-->
+		<!--			<a>-->
+		<!--				<span><i class="far fa-box-open"></i></span>-->
+		<!--				<span>Manual Draw</span>-->
+		<!--			</a>-->
+		<!--			<a>-->
+		<!--				<span><i class="far fa-dice"></i></span>-->
+		<!--				<span>Random Draw</span>-->
+		<!--			</a>-->
+		<!--		</div>-->
 		</section>
 
 		<section id="raffle-sales-alt" data-title="View Raffle Sales" class="centered">
-			<h1>Easter Raffle <span class="subtitle">Ticket Sales</span></h1>
+			<h1 class="banner">
+				<a class="nav-icon" href="#raffles"><i class="far fa-arrow-left"></i></a>
+				Ticket Sales</h1>
 
-			<p><i class="far fa-ticket-alt"></i> 12 tickets sold<br>out of 50 available tickets:</p>
+			<div class="container">
+				<p><i class="far fa-ticket-alt"></i> 12 / 50 tickets sold</p>
+				<input type="search" placeholder="Filter customers…" class="form-control">
 
-			<select class="form-control select-control searchable-select" size="7" readonly
-			        onchange="window.location.hash='#view-customer'">
-				<option>Charles Bingley (4 tickets)</option>
-				<option>Charlotte Lucas (3 tickets)</option>
-				<option>Elizabeth Bennet (2 tickets)</option>
-				<option>Will Darcy (2 tickets)</option>
-				<option>George Wickham (1 ticket)</option>
-				<option>Caroline Bingley</option>
-				<option>William Collins</option>
-			</select>
-			<input type="search" placeholder="Filter customers…" class="form-control">
-
-			<p>tickets sold for $5.00 each by default</p>
+				<select class="form-control select-control searchable-select" size="7" readonly
+				        onchange="window.location.hash='#view-customer'">
+					<option>Charles Bingley (4 tickets)</option>
+					<option>Charlotte Lucas (3 tickets)</option>
+					<option>Elizabeth Bennet (2 tickets)</option>
+					<option>Will Darcy (2 tickets)</option>
+					<option>George Wickham (1 ticket)</option>
+					<option>Caroline Bingley</option>
+					<option>William Collins</option>
+				</select>
+			</div>
 		</section>
 
 		<!----------------- Add Tickets -------------------->
 
 		<section id="sell-tickets" data-title="Sell Tickets">
-			<h1 class="banner">Easter Raffle <span class="subtitle">Sell Tickets</span></h1>
+			<h1 class="banner">
+				<a class="nav-icon" href="#view-raffle"><i class="far fa-arrow-left"></i></a>
+				Sell Tickets for Easter Raffle
+			</h1>
 
-			<div class="form-group row">
-				<label class="col-6 col-form-label">Number of tickets</label>
-				<div class="col-6">
-					<input id="select_tickets_number" type="number" min="0" class="form-control" max="5" value="3">
+			<div class="container">
+
+				<div class="form-group">
+					<label for="select_ticket_customer" class="col-form-label">Select customer</label>
+					<input type="search" placeholder="Filter customers…" class="form-control">
+					<select class="form-control select-control searchable-select" id="select_ticket_customer" size="3">
+						<option>Charles Bingley (has 4 tickets)</option>
+						<option>Charlotte Lucas (has 3 tickets)</option>
+						<option>Elizabeth Bennet (has 2 tickets)</option>
+						<option>Will Darcy (has 2 tickets)</option>
+						<option>George Wickham (has 1 ticket)</option>
+						<option>Caroline Bingley</option>
+						<option>William Collins</option>
+						<option class="btn btn-primary btn-block" onclick="window.location.hash='#add-customer'">Add new
+							customer →
+						</option>
+					</select>
 				</div>
-			</div>
 
-			<div class="form-group row">
-				<label class="col-6 col-form-label">Cost per ticket</label>
-				<div class="col-6">
-					<div class="input-group mb-2">
-						<div class="input-group-prepend">
-							<div class="input-group-text">$</div>
+				<div class="form-group row">
+					<label class="col-6 col-form-label">Number of tickets</label>
+					<div class="col-6">
+						<input id="select_tickets_number" type="number" min="0" class="form-control" max="5"
+						       value="3">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-6 col-form-label">Cost per ticket</label>
+					<div class="col-6">
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">$</div>
+							</div>
+
+							<input id="select_tickets_price" type="number" min="0" class="form-control" value="5.00"
+							       step=".01">
 						</div>
-
-						<input id="select_tickets_price" type="number" min="0" class="form-control" value="5.00"
-						       step=".01">
 					</div>
 				</div>
 			</div>
 
-
-			<div class="form-group">
-				<label for="select_ticket_customer" class="col-form-label">Select a customer, or add a new one</label>
-
-				<select class="form-control select-control searchable-select" id="select_ticket_customer" size="3">
-					<option>Charles Bingley (has 4 tickets)</option>
-					<option>Charlotte Lucas (has 3 tickets)</option>
-					<option>Elizabeth Bennet (has 2 tickets)</option>
-					<option>Will Darcy (has 2 tickets)</option>
-					<option>George Wickham (has 1 ticket)</option>
-					<option>Caroline Bingley</option>
-					<option>William Collins</option>
-					<option class="btn btn-primary btn-block" onclick="window.location.hash='#add-customer'">Add new
-						customer →
-					</option>
-				</select>
-				<input type="search" placeholder="Filter customers…" class="form-control">
-			</div>
-
-			<p>Purchasing 3 tickets at $5.00 each =<br>$15.00 total</p>
-			<a class="btn btn-primary" href="#tickets-created">Save Purchase</a>
+			<p>Total amount: $15.00 </p>
+			<p>
+				<a class="btn btn-primary" href="#view-raffle">Confirm Purchase</a>
+				<a class="btn btn-secondary" href="#view-raffle">Cancel</a>
+			</p>
 		</section>
 
 		<!----------------- Generated Tickets -------------------->
 
 		<section id="tickets-created" data-title="Tickets Created">
-			<h1>Your Tickets <i class="far fa-ticket-alt"></i></h1>
+			<h1 class="banner"> Tickets Purchased </h1>
 
 			<p>Success! Here are the three tickets for Charlotte Lucas:</p>
 
@@ -283,165 +266,121 @@
 		<!---------------- Add Customer ------------------->
 
 		<section id="add-customer" data-title="Add customer">
-			<h1 class="icon-heading">Add Customer <i class="far fa-user-plus"></i></h1>
+			<h1 class="banner">
+				<a class="nav-icon" href="#customers"><i class="far fa-arrow-left"></i></a>
+				Add Customer
+			</h1>
 
-			<form>
+			<form class="container">
 				<div class="form-group">
-					<label>Customer Name</label>
-					<input type="text" class="form-control is-valid" value="Jane Bennet" required>
+					<label>First name</label>
+					<input type="text" class="form-control is-valid" value="Jane" required>
 				</div>
 
 				<div class="form-group">
-					<label>Phone Number</label>
+					<label>Surname</label>
+					<input type="text" class="form-control is-valid" value="Bennet" required>
+				</div>
+
+				<div class="form-group">
+					<label>Email address</label>
+					<input type="email" class="form-control is-valid" value="jane@thebennets.co.uk">
+				</div>
+
+				<div class="form-group">
+					<label>Phone number</label>
 					<input type="tel" class="form-control is-invalid" required>
 				</div>
 
-				<div class="form-group">
-					<label>Email Address</label>
-					<input type="tel" class="form-control is-valid" value="jane@thebennets.co.uk">
-				</div>
-
-				<button type="submit" class="btn btn-primary btn-center">Save Customer</button>
+				<button type="submit" class="btn btn-primary btn-center">Add Customer</button>
 			</form>
 		</section>
 
 		<!---------------- All Customers ------------------->
 
 		<section id="customers" data-title="All Customers" class="stack-list-view">
-			<h1 class="icon-heading">All Customers <i class="far fa-address-book"></i></h1>
+			<h1 class="banner">Raffle Customers</h1>
 
 			<input type="search" placeholder="Filter customers…" class="form-control">
 			<nav>
-				<a href="#view-customer"><i class="far fa-user"></i> Caroline Bingley</a>
-				<a href="#view-customer"><i class="far fa-user"></i> Charles Bingley</a>
-				<a href="#view-customer"><i class="far fa-user"></i> Charlotte Lucas</a>
-				<a href="#view-customer"><i class="far fa-user"></i> Elizabeth Bennet</a>
-				<a href="#view-customer"><i class="far fa-user"></i> George Wickham</a>
-				<a href="#view-customer"><i class="far fa-user"></i> Will Darcy</a>
-				<a href="#view-customer"><i class="far fa-user"></i> William Collins</a>
+				<a href="#view-customer">Caroline Bingley</a>
+				<a href="#view-customer">Charles Bingley</a>
+				<a href="#view-customer">Charlotte Lucas</a>
+				<a href="#view-customer">Elizabeth Bennet</a>
+				<a href="#view-customer">George Wickham</a>
+				<a href="#view-customer">Will Darcy</a>
+				<a href="#view-customer">William Collins</a>
 			</nav>
+
+			<a class="add-button" href="#add-customer"><i class="far fa-plus"></i></a>
 		</section>
 
 		<!------------- Create Raffle ------------------>
 
 		<section id="add-raffle" data-title="Create Raffle">
-			<h1 class="icon-heading">Create Raffle
-				<i class="icon-group"><span class="far fa-ticket-alt"></span><span class="far fa-plus"></span></i>
+
+			<h1 class="banner">
+				<a class="nav-icon" href="#raffles"><i class="far fa-arrow-left"></i></a>
+				Create Raffle
 			</h1>
 
-			<form>
-				<div class="form-group">
-					<label>Name of Raffle</label>
-					<input type="text" class="form-control" required>
-				</div>
-
-				<div class="form-group">
-					<label>Scheduled Draw Date</label>
-					<input type="datetime-local" class="form-control" required>
-				</div>
-
-				<div class="form-group">
-					<label>Raffle Icon</label>
-					<div class="input-group mb-2">
-						<input type="text" class="form-control" value="rocket">
-						<div class="input-group-append">
-							<div class="input-group-text"><i class="fa fa-rocket"></i></div>
-						</div>
-					</div>
-				</div>
-
-				<fieldset class="form-group ">
-					<legend>Ticketing Details</legend>
+			<div class="container">
+				<form>
 					<div class="form-group">
-						<label class="col-form-label">Default ticket price</label>
-
-						<div class="input-group mb-2">
-							<div class="input-group-prepend">
-								<div class="input-group-text">$</div>
-							</div>
-
-							<input type="number" min="0" class="form-control" value="5.00" step=".01">
-						</div>
+						<label>Raffle Name</label>
+						<input type="text" class="form-control" required>
 					</div>
 
 					<div class="form-group">
-						<label>Total number of tickets</label>
-						<input type="number" value="0" class="form-control">
-						<small class="form-text text-muted">Set to 0 if there is no limit on the overall number of
-							tickets
-							sold.</small>
+						<label>Raffle Description</label>
+						<textarea class="form-control" required></textarea>
 					</div>
 
 					<div class="form-group">
-						<label>Max number of tickets per person</label>
-						<input type="number" value="0" class="form-control">
-						<small class="form-text text-muted">Set to 0 if there is no limit on the number of tickets one
-							individual customer may purchase.</small>
+						<label>Raffle Image</label>
+						<input type="file" class="form-control">
 					</div>
-				</fieldset>
 
-				<button type="submit" class="btn btn-primary btn-block">Create Raffle</button>
-			</form>
+					<div class="form-group">
+						<label>Total number of tickets available</label>
+						<input type="number" class="form-control">
+						<!--						<small class="form-text text-muted">Set to 0 if there is no limit on the overall number of-->
+						<!--							tickets-->
+						<!--							sold.</small>-->
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-center">Create Raffle</button>
+				</form>
+			</div>
 		</section>
 
-		<section id="edit-raffle" data-title="Create Raffle">
-			<h1>Editing <a href="#view-raffle">Easter Raffle <i class="far fa-rabbit"></i></a></h1>
+		<section id="edit-raffle" data-title="Edit Raffle">
+			<h1 class="banner">
+				<a class="nav-icon" href="#view-raffle"><i class="far fa-arrow-left"></i></a>
+				Editing Easter Raffle</h1>
 
-			<form>
+			<form class="container">
 				<div class="form-group">
-					<label>Name of Raffle</label>
+					<label>Raffle Name</label>
 					<input type="text" class="form-control" required value="Easter Raffle">
 				</div>
 
 				<div class="form-group">
-					<label>Scheduled Draw Date</label>
-					<input type="datetime-local" class="form-control" required value="2020-04-12T10:00">
+					<label>Raffle Description</label>
+					<textarea class="form-control" required>Raffle description goes here</textarea>
 				</div>
 
 				<div class="form-group">
-					<label>Raffle Icon</label>
-					<div class="input-group mb-2">
-						<input type="text" class="form-control" value="rabbit">
-						<div class="input-group-append">
-							<div class="input-group-text"><i class="fa fa-rabbit"></i></div>
-						</div>
-					</div>
+					<label>Raffle Image</label>
+					<input type="file" class="form-control">
 				</div>
 
-				<fieldset class="form-group ">
-					<legend>Ticketing Details</legend>
-					<div class="form-group">
-						<label class="col-form-label">Default ticket price</label>
+				<div class="form-group">
+					<label>Total number of tickets available</label>
+					<input type="number" class="form-control" value="50">
+				</div>
 
-						<div class="input-group mb-2">
-							<div class="input-group-prepend">
-								<div class="input-group-text">$</div>
-							</div>
-
-							<input type="number" min="0" class="form-control" value="5.00" step=".01">
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label>Total number of tickets</label>
-						<input type="number" value="50" class="form-control">
-						<small class="form-text text-muted">Set to 0 if there is no limit on the overall number of
-							tickets
-							sold.</small>
-					</div>
-
-					<div class="form-group">
-						<label>Max number of tickets per person</label>
-						<input type="number" value="0" class="form-control">
-						<small class="form-text text-muted">Set to 0 if there is no limit on the number of tickets one
-							individual customer may purchase.</small>
-					</div>
-				</fieldset>
-
-				<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
-
-				<p>Deleting a raffle will permanently remove all associated data, including ticket sales.</p>
-				<p><button class="btn btn-danger btn-block"><i class="far fa-trash"></i> Delete Raffle</button></p>
+				<button type="submit" class="btn btn-primary btn-center">Save Changes</button>
 			</form>
 		</section>
 
@@ -452,13 +391,13 @@
 
 			<form action="#add-raffle-alt-2" method="get">
 				<div class="form-group">
-					<label>Name of Raffle</label>
+					<label>Raffle Name</label>
 					<input type="text" class="form-control" required>
 				</div>
 
 				<div class="form-group">
-					<label>Scheduled Draw Date</label>
-					<input type="datetime-local" class="form-control" required>
+					<label>Raffle Description</label>
+					<textarea class="form-control" required></textarea>
 				</div>
 
 				<div class="form-group">
@@ -520,98 +459,38 @@
 		<!------------- Single Customer ------------------>
 
 		<section id="view-customer" data-title="View Customer">
-			<h1 class="icon-heading">Charlotte Lucas <i class="far fa-user"></i></h1>
 
-			<p>
-				<a href="tel:0467890290"><i class="far fa-phone"></i> 0467 890 290</a><br>
-				<a href="mailto:charlotte@longbourn.co.uk"><i class="far fa-envelope"></i> charlotte@longbourn.co.uk</a>
-			</p>
+			<h1 class="banner">
+				<a class="nav-icon" href="#customers"><i class="far fa-arrow-left"></i></a>
+				Edit Customer Details
+			</h1>
 
-			<h4>Purchased Tickets</h4>
-
-			<p>Purchased for $5 on 19 Mar 20</p>
-
-			<section class="action-box">
-				<input type="checkbox" class="form-control">
-				<div class="ticket">
-					<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10713</span></div>
+			<form class="container">
+				<div class="form-group">
+					<label>First name</label>
+					<input type="text" class="form-control is-valid" value="Charlotte" required>
 				</div>
-			</section>
-			<section class="action-box">
-				<input type="checkbox" class="form-control">
-				<div class="ticket">
-					<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10714</span></div>
+
+				<div class="form-group">
+					<label>Surname</label>
+					<input type="text" class="form-control is-valid" value="Lucas" required>
 				</div>
-			</section>
-			<section class="action-box">
-				<input type="checkbox" class="form-control">
-				<div class="ticket">
-					<div class="ticket-inner"><i class="far fa-rabbit"></i> <span>10715</span></div>
+
+				<div class="form-group">
+					<label>Email address</label>
+					<input type="email" class="form-control is-valid" value="charlotte@longbourn.co.uk">
 				</div>
-			</section>
 
-			<p>Purchased for $3 on 10 Jan 20</p>
-
-			<section class="action-box">
-				<input type="checkbox" class="form-control">
-				<div class="ticket">
-					<div class="ticket-inner"><i class="far fa-glass-cheers"></i> <span>10654</span></div>
+				<div class="form-group">
+					<label>Phone number</label>
+					<input type="tel" class="form-control is-valid" required value="0467890290">
 				</div>
-			</section>
-			<section class="action-box">
-				<input type="checkbox" class="form-control">
-				<div class="ticket">
-					<div class="ticket-inner"><i class="far fa-glass-cheers"></i> <span>10653</span></div>
-				</div>
-			</section>
 
-			<button class="btn btn-danger btn-sm" style="margin: 1em 0 2em;"><i class="far fa-trash"></i>&nbsp; Remove selected tickets</button>
-		</section>
-
-		<!------------- Customers List (Alternate) ------------------>
-
-		<section id="customers-alt" data-title="All Customers (alt)" class="stack-list-view">
-			<div class="wrapper">
-				<h1 class="banner">
-					Raffle Customers <i class="far fa-dice"></i>
-				</h1>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>Caroline Bingley</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>Charles Bingley</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>Charlotte Lucas</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>Elizabeth Bennet</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>George Wickham</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>Will Darcy</span>
-					<i class="far fa-edit"></i>
-				</a>
-				<a href="#view-customer">
-					<i class="far fa-user"></i>
-					<span>William Collins</span>
-					<i class="far fa-edit"></i>
-				</a>
-			</div>
-			<a class="add-button" href="#add-customer"><i class="far fa-plus"></i></a>
+				<p style="text-align: center">
+					<button type="submit" class="btn btn-primary ">Save Changes</button>
+					<button type="button" class="btn btn-secondary ">Cancel</button>
+				</p>
+			</form>
 		</section>
 
 		<!------------- Unimplemented screen ------------------>
@@ -632,8 +511,6 @@
 </div>
 
 <div class="index">
-	<h3>Prototype 1</h3>
-
 	<ul>
 		<li><a href="#landing">Landing screen</a></li>
 	</ul>
@@ -645,7 +522,7 @@
 	</ul>
 	<ul>
 		<li><a href="#sell-tickets">Selling tickets</a></li>
-		<li><a href="#tickets-created">Tickets created</a></li>
+		<!--		<li><a href="#tickets-created">Tickets created</a></li>-->
 	</ul>
 	<ul>
 		<li><a href="#add-customer">Adding a new customer</a></li>
@@ -653,19 +530,7 @@
 		<li><a href="#view-customer">Viewing customer details</a></li>
 	</ul>
 
-	<h3>Prototype 2</h3>
 	<ul>
-		<li><a href="#landing-alt">Landing screen (version 2)</a></li>
-		<li><a href="#customers-alt">List of customers (version 2)</a></li>
-	</ul>
-
-	<h3>Prototype 3</h3>
-	<ul>
-		<li><a href="#add-raffle-alt">Creating a raffle (version 2)</a></li>
-		<li><a href="#add-raffle-alt-2">Creating a raffle, step two</a></li>
-	</ul>
-	<ul>
-		<li><a href="#view-raffle-alt">Viewing a raffle (version 2)</a></li>
 		<li><a href="#raffle-sales-alt">Viewing a raffle's sales</a></li>
 	</ul>
 </div>

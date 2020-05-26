@@ -12,15 +12,30 @@
 	h1 {
 		//color: $olive;
 		text-align: center;
-		font-size: 2rem;
+		font-size: 2.3rem;
 		margin: 0;
 		padding: 0;
 
 		i {
 			display: block;
-			font-size: 2.3rem;
+			font-size: 3rem;
 			padding-bottom: 10px;
 		}
+	}
+
+	a.action-button {
+		font-size: 1.6rem;
+
+		> span:first-child {
+			font-size: 3rem;
+		}
+	}
+}
+
+.center-stack-arranged {
+	.btn, .action-button {
+		max-width: 200px;
+		width: 80%;
 	}
 }
 
@@ -77,14 +92,37 @@
 	text-align: left;
 	background: $olive;
 	font-size: 1.2rem;
-	font-weight: normal;
+	font-weight: bold;
 	color: #fff;
-	margin: 0;
 	padding: 10px;
+	width: 100%;
+	margin: 0 0 1em;
 
-	span {
+	.subtitle {
 		display: block;
 		font-size: small;
+		font-weight: normal;
+	}
+
+	.nav-icon, .action-icon {
+		color: #fff;
+		font-size: 1.2rem;
+	}
+
+	.nav-icon {
+		margin: 0 1.5em 0 .5em;
+	}
+
+	.action-icon {
+		float: right;
+
+		a {
+			color: #fff;
+		}
+
+		i {
+			margin-left: 1em;
+		}
 	}
 }
 
@@ -109,9 +147,15 @@
 
 #view-raffle {
 	text-align: center;
+
+	.btn-lg {
+		font-size: 1.3rem;
+		margin: 2em auto;
+		padding: 1em .5em;
+	}
 }
 
-#view-raffle, #add-raffle, #edit-raffle {
+#add-raffle, #edit-raffle {
 	> :last-child {
 		margin-bottom: 2em;
 	}
@@ -151,8 +195,17 @@
 }
 
 #customers {
+
+	input[type=search] {
+		border-radius: 0;
+	}
+
 	nav a {
-		color: $primary;
+		font-size: 0.9rem;
+		font-weight: bold;
+		padding: 15px 10px;
+		color: $text-grey;
+		border-bottom-color: #bbb;
 	}
 }
 
@@ -161,7 +214,7 @@ h1 i, h1 i span {
 	line-height: 1.5;
 }
 
-#tickets-created, #view-customer {
+#tickets-created {
 	display: flex;
 	flex-flow: column;
 	text-align: center;
